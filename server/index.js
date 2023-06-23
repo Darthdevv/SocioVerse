@@ -9,6 +9,7 @@ import multer from 'multer';
 import path from 'path'
 import { fileURLToPath } from 'url';
 import authRoutes from './routes/auth';
+import userRoutes from './routes/users';
 import { register } from './controllers/auth';
 
 
@@ -43,6 +44,7 @@ const upload = multer({ storage });
 
 // ROUTES :
 app.use("/auth", authRoutes);
+app.use("/users", userRoutes);
 
 // MONGOOSE SETUP
 const PORT = process.env.PORT || 6001;
