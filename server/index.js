@@ -8,7 +8,8 @@ import dotenv from 'dotenv';
 import multer from 'multer';
 import path from 'path'
 import { fileURLToPath } from 'url';
-import {register} from './controllers/auth'
+import authRoutes from './routes/auth';
+import { register } from './controllers/auth';
 
 
 // CONFIGURATIONS :
@@ -39,6 +40,9 @@ const storage = multer.diskStorage({
 app.post("/auth/register", upload.single('picture'), register);
 
 const upload = multer({ storage });
+
+// ROUTES :
+app.use("/auth", authRoutes);
 
 // MONGOOSE SETUP
 const PORT = process.env.PORT || 6001;
