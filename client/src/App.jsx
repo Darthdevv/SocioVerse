@@ -6,7 +6,7 @@ import Profile from './pages/Profile'
 import { useMemo } from 'react'
 import { useSelector } from 'react-redux'
 import { ThemeProvider, CssBaseline } from '@mui/material'
-import { themeSettings } from 'theme'
+import { themeSettings } from './theme'
 import { createTheme } from '@mui/material'
 
 function App() {
