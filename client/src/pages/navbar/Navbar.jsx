@@ -21,9 +21,9 @@ import {
   Close,
 } from "@mui/icons-material";
 import { useDispatch, useSelector } from "react-redux";
-import { setMode, setLogout } from "../tools/index";
+import { setMode, setLogout } from "../../tools/index";
 import { useNavigate } from "react-router-dom";
-import FlexBetween from "../components/FlexBetween";
+import FlexBetween from "../../components/FlexBetween";
 
 function Navbar() {
   const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
@@ -102,7 +102,7 @@ function Navbar() {
               }}
               input={<InputBase />}
             >
-              <MenuItem >
+              <MenuItem>
                 <Typography>fullName</Typography>
               </MenuItem>
               <MenuItem onClick={() => dispatch(setLogout())}>Log Out</MenuItem>
@@ -161,7 +161,6 @@ function Navbar() {
             <Help sx={{ fontSize: "25px" }} />
             <FormControl variant="standard">
               <Select
-                
                 sx={{
                   backgroundColor: neutralLight,
                   width: "150px",
@@ -177,7 +176,7 @@ function Navbar() {
                 }}
                 input={<InputBase />}
               >
-                <MenuItem >
+                <MenuItem>
                   <Typography>fullName</Typography>
                 </MenuItem>
                 <MenuItem onClick={() => dispatch(setLogout())}>
@@ -190,7 +189,6 @@ function Navbar() {
       )}
     </FlexBetween>
   );
- 
 }
 
 export default Navbar;
