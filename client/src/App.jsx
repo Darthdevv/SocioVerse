@@ -10,8 +10,8 @@ import { themeSettings } from './theme'
 import { createTheme } from '@mui/material'
 
 function App() {
-  const mode = useSelector(state => state.mode);
-  const theme = useMemo(() => createTheme(themeSettings(mode)),[mode]);
+    const mode = useSelector((state) => state.mode);
+    const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
 
   return (
     <div className="app">
